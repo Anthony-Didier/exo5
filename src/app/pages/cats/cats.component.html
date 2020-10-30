@@ -1,0 +1,7 @@
+<ul>
+    <li *ngFor="let cat of cats">
+        <p>{{cat.nom}} {{cat.age}} {{cat.race}} {{cat.vivant}}</p>
+        <button (click)="supprimer(cat.id)">Supprimer</button>
+    </li>
+</ul>
+<button routerLink="/form">Nouveau chat</button>

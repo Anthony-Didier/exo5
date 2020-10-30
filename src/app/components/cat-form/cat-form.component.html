@@ -1,0 +1,11 @@
+<form [formGroup]="catForm" (ngSubmit)="onSubmit()">
+    <input type="text" placeholder="nom du chat" formControlName="nom">
+    <input type="number" placeholder="âge" formControlName="age">
+    <input type="text" placeholder="race" formControlName="race">
+    <label for="vivant-select">Vivant ?</label>
+    <select id="vivant-select" formControlName="vivant">
+    <option selected value="true">Oui</option>
+    <option value="false">Non</option>
+    </select>
+    <button type="submit">Ajouter</button>
+</form>
