@@ -22,7 +22,7 @@ export class CatsComponent implements OnInit {
     this.catService.delete(id).then(() => {
         this.cats = this.cats.filter(cat => cat.id!=id);
     });
-}
+  }
 
   ngOnInit(): void {
   }

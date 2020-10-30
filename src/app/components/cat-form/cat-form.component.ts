@@ -12,7 +12,8 @@ export class CatFormComponent implements OnInit {
 
   catForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, 
+  constructor(
+    private formBuilder: FormBuilder, 
     private catService: CatService,
     private router: Router
     ) { 
@@ -31,5 +32,7 @@ export class CatFormComponent implements OnInit {
     this.catService.create(this.catForm.value).subscribe(()=>{
       this.router.navigate(['/'])
     });
+    console.log(this.catForm.value);
+    
   }
 }

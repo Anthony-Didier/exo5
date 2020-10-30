@@ -1,11 +1,39 @@
-<form [formGroup]="catForm" (ngSubmit)="onSubmit()">
+<h1>Ajouter un chat</h1>
+<!--<form [formGroup]="catForm" (ngSubmit)="onSubmit()">
     <input type="text" placeholder="nom du chat" formControlName="nom">
     <input type="number" placeholder="âge" formControlName="age">
     <input type="text" placeholder="race" formControlName="race">
     <label for="vivant-select">Vivant ?</label>
     <select id="vivant-select" formControlName="vivant">
-    <option selected value="true">Oui</option>
-    <option value="false">Non</option>
+    <option selected value=true>Vivant</option>
+    <option value=false>Décédé</option>
     </select>
     <button type="submit">Ajouter</button>
+</form>-->
+<form [formGroup]="catForm" (ngSubmit)="onSubmit()" class="example-container">
+    <mat-form-field appearance="fill">
+        <input matInput type="text" placeholder="nom du chat" formControlName="nom">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <input matInput type="number" placeholder="âge" formControlName="age">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <input matInput type="text" placeholder="race" formControlName="race">
+    </mat-form-field>
+    <br>
+    <!--<select formControlName="vivant">
+        <option selected value=true>Vivant</option>
+        <option value=false>Décédé</option>
+    </select>-->
+    <mat-form-field appearance="fill">
+        <mat-label>Vivant ?</mat-label>
+        <mat-select formControlName="vivant">
+            <mat-option value=true>Vivant</mat-option>
+            <mat-option value=false>Décédé</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button type="submit">Ajouter</button>
 </form>
